@@ -2,10 +2,248 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Il mio sito su GitHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Blog di Cucina & Ricette</title>
+    <style>
+        /* Stili generali della pagina */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header e Menu di Navigazione */
+        header {
+            background-color: #e63946;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f1faee;
+            text-decoration: underline;
+        }
+
+        /* Contenitore principale */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #e63946;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f1faee;
+            padding-bottom: 5px;
+        }
+
+        /* Griglia delle Schede / Ricette */
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fff;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .recipe-img-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .recipe-content {
+            padding: 15px;
+        }
+
+        .recipe-content h3 {
+            margin-bottom: 10px;
+            color: #1d3557;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #c1121f;
+        }
+
+        /* Sezione Social */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .instagram { background-color: #e1306c; }
+        .tiktok { background-color: #000000; }
+        .youtube { background-color: #ff0000; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1d3557;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Benvenuto sul mio sito web!</h1>
-    <p>Questo sito è ospitato gratuitamente su GitHub Pages.</p>
+
+    <!-- Header con Menu di Navigazione -->
+    <header>
+        <nav>
+            <div class="logo">Le Mie Ricette 🍳</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ricette">Ricette</a></li>
+                <li><a href="#social">Social</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Sezione Home / Presentazione -->
+        <section id="home">
+            <h2>Benvenuti nel mio Angolo del Gusto!</h2>
+            <p>Ciao a tutti! Questo è il mio spazio dedicato alla cucina e alla passione per il buon cibo.</p>
+            <p>Qui troverete le mie ricette preferite, dai piatti della tradizione alle creazioni più veloci e gustose. Ogni scheda contiene ingredienti, tempi di preparazione e i miei consigli segreti per un risultato perfetto.</p>
+        </section>
+
+        <!-- Sezione Schede Ricette -->
+        <section id="ricette">
+            <h2>Le Mie Ricette</h2>
+            <p>Esplora le ultime ricette pubblicate:</p>
+
+            <div class="recipes-grid">
+
+                <!-- Scheda Ricetta 1 -->
+                <article class="recipe-card">
+                    <div class="recipe-img-placeholder">
+                        [ Immagine Pasta alla Carbonara ]
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Spaghetti alla Carbonara</h3>
+                        <p>La classica ricetta romana preparata secondo la tradizione, cremosa e senza panna!</p>
+                        <a href="#" class="btn">Leggi la ricetta</a>
+                    </div>
+                </article>
+
+                <!-- Scheda Ricetta 2 (Esempio per il futuro) -->
+                <article class="recipe-card">
+                    <div class="recipe-img-placeholder">
+                        [ Immagine Tiramisù ]
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Tiramisù Classico</h3>
+                        <p>Un dolce al cucchiaio amato da tutti, morbido e ricco di gusto al profumo di caffè.</p>
+                        <a href="#" class="btn">Leggi la ricetta</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sezione Social -->
+        <section id="social">
+            <h2>Seguimi sui Social</h2>
+            <p>Rimani sempre aggiornato sulle nuove ricette e scopri i retroscena seguendomi sui miei profili ufficiali:</p>
+            
+            <div class="social-links">
+                <!-- Sostituisci il simbolo # con il link del tuo profilo reale -->
+                <a href="https://instagram.com" target="_blank" class="social-btn instagram">Instagram</a>
+                <a href="https://tiktok.com" target="_blank" class="social-btn tiktok">TikTok</a>
+                <a href="https://youtube.com" target="_blank" class="social-btn youtube">YouTube</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Le Mie Ricette - Realizzato con GitHub Pages</p>
+    </footer>
+
 </body>
 </html>
